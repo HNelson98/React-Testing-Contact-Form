@@ -20,4 +20,12 @@ test("inputs are visible", () =>{
 
 });
 
-test("form submit adds the form on the screen", () =>{});
+test("form submit adds the form on the screen", () =>{
+    //ARRANGE
+    const {getByLabelText} = render (<ContactForm />)
+
+    const fNameInput = getByLabelText(/first name/i)
+    const lNameInput = getByLabelText(/last name/i)
+    const emailInput = getByLabelText(/email/i)
+    const messageInput = getByLabelText(/message/i)
+});
